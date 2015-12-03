@@ -18,8 +18,8 @@ add_action('publish_page','sendMail');
 
 function soft_admin_menu(){
 	add_menu_page(
-		'素敵なプラグイン - 設定',
-		'素敵なプラグイン',
+		'updateNotice - Settings',
+		'updateNotice',
 		'administrator',
 		'soft_admin_menu',
 		'soft_edit_setting',
@@ -50,9 +50,9 @@ function soft_edit_setting(){
 
 	$MaxNum=get_option('MaxNum');
 	$Sort=get_option('Sort');
-        $SendMailFrom=get_option('SendMailFrom');
-        $SendMailSub=get_option('SendMailSub');
-        $SendMailText=get_option('SendMailText');
+    $SendMailFrom=get_option('SendMailFrom');
+    $SendMailSub=get_option('SendMailSub');
+    $SendMailText=get_option('SendMailText');
 	$SendMailTextAdd=get_option('SendMailTextAdd');
 	$WPROOTDIR=get_option('WPROOTDIR');
 	$WPROOTDIR2=get_option('WPROOTDIR2');
@@ -60,7 +60,7 @@ function soft_edit_setting(){
 echo <<<EOD
 	<div id="icon-options-general" class="icon32"></div>
 
-	<h2>Software_Tech_Kadai3 - 設定メニュー</h2>
+	<h2>Settings</h2>
 	<br><br>
 	<form method="post" action="">
 		<table class="form-table">
